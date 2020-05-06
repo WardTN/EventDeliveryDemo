@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.example.eventdeliverydemo.RelativeLayoutView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/group">
+
+        <com.example.eventdeliverydemo.MyView
+            android:id="@+id/view"
+            android:layout_width="300dp"
+            android:text="Hello"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="300dp"/>
+    </com.example.eventdeliverydemo.RelativeLayoutView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activity"/>
+            <CheckBox android:id="@+id/a_dispatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dispatch"
+                android:onClick="onCheckBox"/>
+            <CheckBox android:id="@+id/a_touch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="touch"
+                android:onClick="onCheckBox"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Group"/>
+            <CheckBox android:id="@+id/g_dispatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dispatch"
+                android:onClick="onCheckBox"/>
+            <CheckBox android:id="@+id/g_intercept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="intercept"
+                android:onClick="onCheckBox"/>
+            <CheckBox android:id="@+id/g_touch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="touch"
+                android:onClick="onCheckBox"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Child"
+                android:onClick="onCheckBox"/>
+            <CheckBox android:id="@+id/v_dispatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dispatch"
+                android:onClick="onCheckBox"/>
+            <CheckBox android:id="@+id/v_touch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="touch"
+                android:onClick="onCheckBox"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
